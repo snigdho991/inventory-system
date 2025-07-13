@@ -38,7 +38,7 @@ class AddSale extends Component
         if ($find_product->stock > 0) {
             $discount = $this->discount ? $this->discount : 0;
             $vat = round(($find_product->sell_price * $this->quantity - $discount) * $this->vat / 100, 2);
-            $subtotal = round($find_product->sell_price * $this->quantity - $discount, 2);
+            $subtotal = round(($find_product->sell_price * $this->quantity - $find_product->purchase_price * $this->quantity) - $discount, 2);
             $total = round($find_product->sell_price * $this->quantity + $vat - $discount, 2);
             $due = round($total - $this->paid, 2);
 

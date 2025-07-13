@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Livewire\AddProduct;
 use App\Livewire\ProductList;
 use App\Livewire\Sales\AddSale;
+use App\Livewire\Sales\SaleList;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,4 +23,6 @@ Route::middleware([
     Route::get('/product/new', AddProduct::class)->name('products.create');
     Route::get('/products/all', ProductList::class)->name('products.all');
     Route::get('/sale/create', AddSale::class)->name('sale.create');
+    Route::get('/sales/all', SaleList::class)->name('sales.all');
+
 });
