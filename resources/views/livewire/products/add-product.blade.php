@@ -13,7 +13,7 @@
                 </div>
             @endif
 
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Information</h2>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Product Information</h2>
 
             <form wire:submit.prevent="save" class="space-y-4">
                 @csrf
