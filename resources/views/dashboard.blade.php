@@ -6,10 +6,14 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
+        <div class="px-16 text-center">
+            <h2 class="text-2xl font-bold mb-4">Welcome to Inventory System</h2>
+            <ul class="flex justify-center gap-8">
+                <li><a href="" class="text-blue-500 hover:text-black duration-200">➕ Add New Product</a></li>
+                <li><a href="" class="text-blue-500 hover:text-black duration-200">📦 Products List</a></li>
+                <li><a href="" class="text-blue-500 hover:text-black duration-200">🛒 Create New Sale</a></li>
+                <li><a href="" class="text-blue-500 hover:text-black duration-200">📊 View Reports</a></li>
+            </ul>
         </div>
     </div>
 </x-app-layout>
