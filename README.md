@@ -5,13 +5,13 @@ This is an inventory management system where products, stocks, sales can be mana
 
 ## Requirements
 
-PHP >= 8.2
-Laravel 12.x
-Composer
-Node.js and NPM
-MySQL
-Laravel Jetstream (with Livewire stack)
-Laravel Livewire
+PHP >= 8.2 <br>
+Laravel 12.x <br>
+Composer <br>
+Node.js and NPM <br>
+MySQL <br>
+Laravel Jetstream (with Livewire stack) <br>
+Laravel Livewire <br>
 
 ## Installation
 
@@ -44,7 +44,7 @@ php artisan migrate
 php artisan tinker <br>
     >>> \App\Models\User::create(['name'=>'Test User', 'email'=>'test@example.com', 'password'=>bcrypt('password')])
 
-7. Serve the App <br>
+7. Serve the application- <br>
 php artisan serve
 
 
