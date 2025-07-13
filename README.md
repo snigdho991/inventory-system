@@ -26,7 +26,7 @@ npm install && npm run dev
 3. Configure Environment <br>
 Copy .env.example to .env: <br>
 
-Update the following in your .env:
+Update the following in your .env: <br>
 DB_CONNECTION=mysql <br>
 DB_HOST=127.0.0.1 <br>
 DB_PORT=3306 <br>
