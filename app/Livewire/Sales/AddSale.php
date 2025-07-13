@@ -41,6 +41,8 @@ class AddSale extends Component
             $subtotal = round(($find_product->sell_price * $this->quantity - $find_product->purchase_price * $this->quantity) - $discount, 2);
             $total = round($find_product->sell_price * $this->quantity + $vat - $discount, 2);
             $due = round($total - $this->paid, 2);
+            $sales = round($find_product->sell_price * $this->quantity, 2);
+            $expenses = round($find_product->purchase_price * $this->quantity + $discount, 2);
 
             Sale::create([
                 'product_id' => $this->product,
@@ -50,7 +52,9 @@ class AddSale extends Component
                 'subtotal' => $subtotal,
                 'total' => $total,
                 'paid' => $this->paid,
-                'due' => $due
+                'due' => $due,
+                'sales' => $sales,
+                'expenses' => $expenses
             ]);
 
             $find_product->stock = $find_product->stock - $this->quantity;
@@ -59,7 +63,7 @@ class AddSale extends Component
             session()->flash('message', 'Sale saved successfully!');
 
         } else {
-            session()->flash('error', 'Product stock out!');
+            session()->flash('error', 'Out of stock!');
         }
 
         $this->reset();

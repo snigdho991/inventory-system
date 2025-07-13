@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Products;
 
 use App\Models\Product;
-use Illuminate\Http\Request;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 
@@ -24,7 +23,7 @@ class AddProduct extends Component
 
     public function render()
     {
-        return view('livewire.add-product');
+        return view('livewire.products.add-product');
     }
 
     public function save()

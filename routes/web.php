@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\ProductController;
-use App\Livewire\AddProduct;
-use App\Livewire\ProductList;
+use App\Livewire\Products\AddProduct;
+use App\Livewire\Products\ProductList;
+use App\Livewire\Report\FinancialReport;
 use App\Livewire\Sales\AddSale;
 use App\Livewire\Sales\SaleList;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::middleware([
@@ -24,5 +25,7 @@ Route::middleware([
     Route::get('/products/all', ProductList::class)->name('products.all');
     Route::get('/sale/create', AddSale::class)->name('sale.create');
     Route::get('/sales/all', SaleList::class)->name('sales.all');
+    Route::get('/financial-report', FinancialReport::class)->name('financial.report');
+
 
 });
